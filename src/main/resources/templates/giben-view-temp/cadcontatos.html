@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>GIBEN - Bootstrap Admin Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
+    <meta content="" name="keyworcadfornectransporte.htmlds">
     <meta content="" name="description">
 
     <!-- Favicon -->
@@ -61,13 +61,45 @@
                         <span>Admin</span>
                     </div>
                 </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link"><i
+                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                                 class="fa fa-laptop me-2"></i>Cadastro</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="cadfornecedor.html" class="dropdown-item active">Cad. de Fornecedor</a>
+                            <a href="cadcontatos.html" class="dropdown-item">Cad. contato</a>
+                            <a href="preenchercadastro.html" class="dropdown-item">Preencher cadastro</a>
+                            <a href="cadservfornc.equip.html" class="dropdown">Forn. de Equipamentos</a>
                         </div>
                     </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-laptop me-2"></i>Elements</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i
+                                class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item active">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -175,94 +207,75 @@
                 <div class="row g-4">
                     <div class="col-sm-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Cadastro de Fornecedor</h6>
+                            <h6 class="mb-4">Contato profissional</h6>
                             <form>
                                 <div class="mb-3">
-                                    <label for="razaosocial" class="form-label">Razão Social</label>
-                                    <input type="text" class="form-control" id="razaosocial" name="razaosocial">
+                                    <label for="text" class="form-label">Contatos Sociais</label>
+                                    <select class="form-select" id="multiple-select-field" data-placeholder="Choose anything" mu>
+                                        <option selected></option>
+                                        <option value="1">Instagram</option>
+                                        <option value="2">Facebook</option>
+                                        <option value="3">Twitter</option>
+                                        <option value="4">Linkedin</option>
+                                        <option value="5">Whatsapp</option>
+                                    </select>
+
+                                    <div id="emailHelp" class="form-text">
+                                    </div>
                                 </div>
+                                <div class="mb-3">
+                                    <label for="text" class="form-label">Contatos moveis</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Telefone fixo</option>
+                                        <option value="2">Celular</option>
+                                    </select>
+
+                                </div>
+
+
+                                <h6 class="mb-4">Contato Empresa</h6>
+                                <label for="exampleInputEmail1" class="form-label">Contatos Sociais</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">Instagram</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="2">Twitter</option>
+                                    <option value="2">Linkedin</option>
+                                    <option value="2">Whatsapp</option>
+                                </select>
+                                <br>
 
                                 <div class="mb-3">
-                                    <label for="nomefantasia" class="form-label">Nome Fantasia</label>
-                                    <input type="text" class="form-control" id="nomefantasia" name="nomefantasia">
-                                </div>
+                                    <label for="exampleInputPassword1" class="form-label">Contatos moveis</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Telefone</option>
+                                        <option value="2">Atendimento</option>
 
-                                <div class="mb-3 col-sm-2">
-                                    <label for="cnpj" class="form-label">CNPJ</label>
-                                    <input type="number" class="form-control" id="cnpj" name="cnpj">
-                                </div>
-
-                                <div class="mb-3 col-sm-2">
-                                    <label for="inscricaomunicipal" class="form-label">Inscrição Municipal</label>
-                                    <input type="number" class="form-control" id="inscricaomunicipal"
-                                        name="inscricaomunicipal">
-                                </div>
-
-                                <div class="col-sm-2">
-                                    <label for="segmento" class="form-label ">Inscrição Estadual</label>
-                                    <select class="form-select form-select mb-3">
-                                        <option selected>Selecione o estado</option>
-                                        <option value="1">AM</option>
-                                        <option value="2">PA</option>
-                                        <option value="3">SP</option>
-                                        <option value="2">RJ</option>
-                                        <option value="3">PR</option>
-                                        <label for="inscricaoestadual" class="form-label">Inscrição Estadual</label>
-                                        <input type="number" class="form-control mb-3" id="inscricaoestadual"
-                                            name="inscricaoestadual">
                                     </select>
+                                    <br>
+                                    <br>
+                                    <button>
+                                        <a href="preenchercadastro.html" ,
+                                            style="background-color: #ffffff; color: rgb(0, 0, 0);">Preencher
+                                            Cadastro</a></button>
+
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="segmento" class="form-label">Segmento</label>
-                                    <select class="form-select form-select-sm mb-3"
-                                        aria-label=".form-select-sm example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="enquadramento" class="form-label">Enquadramento Estadual</label>
-                                    <select class="form-select form-select-sm mb-3"
-                                        aria-label=".form-select-sm example">
-                                        <option selected>Selecione o seu enquadramento</option>
-                                        <option value="1">MEI-Microempreendedor individual</option>
-                                        <option value="2">EI-Empresário individual</option>
-                                        <option value="3">SLU-Sociedade limitada unipessoal</option>
-                                        <option value="1">LTDA-Sociedade Empresária Limitada</option>
-                                        <option value="2">Sociedade Simples</option>
-                                        <option value="3">SA-Sociedade Anônima</option>
-                                    </select>
-                                </div>
-
-                                <button type="button" class="btn btn-secondary m-2">Voltar</button>
-
-                                <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Form End -->
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved.
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
+
+
+
                     </div>
+
+
                 </div>
             </div>
+
+
             <!-- Footer End -->
         </div>
         <!-- Content End -->
