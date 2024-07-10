@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -29,6 +28,7 @@
 		<url />
 	</scm>
 	<properties>
+		<jsass-maven-plugin-artifactId>jsass-maven-plugin</jsass-maven-plugin-artifactId>
 		<java.version>22</java.version>
 	</properties>
 	<dependencies>
@@ -59,7 +59,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -74,7 +73,9 @@
 	</dependencies>
 
 	<build>
+	
 		<plugins>
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -86,31 +87,24 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+
 			<plugin>
 				<groupId>io.bit3</groupId>
-				<artifactId>jsass-maven-plugin</artifactId>
+				<artifactId>jsass</artifactId>
 				<version>5.10.4</version>
-				<executions>
-					<execution>
-						<id>compile-sass</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>update-stylesheets</goal>
-						</goals>
-						<configuration>
-							<inputDirectory>
-								${project.basedir}/src/main/resources/static/scss</inputDirectory>
-							<outputDirectory>
-								${project.basedir}/src/main/resources/static/css</outputDirectory>
-							<includePaths>
-								<includePath>
-									${project.basedir}/src/main/resources/static/scss/bootstrap</includePath>
-							</includePaths>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
+		
 	</build>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.33</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
