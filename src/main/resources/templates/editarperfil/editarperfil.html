@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GIBEN | Menu</title>
+    <title>GIBEN | Editar Perfil</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -21,14 +21,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+    href="../../static/lib/owlcarousel/assets/owl.carousel.min.css"
+	th:href="@{../../static/lib/owlcarousel/assets/owl.carousel.min.css}">
+    <link rel="stylesheet"
+	href="../../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+	th:href="@{../../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="../../static/css/bootstrap.min.css"
+	th:href="@{../../static/css/bootstrap.min.css}">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="../../static/css/style.css"
+	th:href="@{../../static/css/style.css}">
 </head>
 
 <body>
@@ -59,7 +67,8 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="menu.html" class="nav-item nav-link active"><i class="bi bi-grid"></i>Menu</a>
+                    <a href="menu.html" class="nav-item nav-link"><i class="bi bi-grid"></i>Menu</a>
+                    <a href="editarperfil.html" class="nav-item nav-link active"><i class="bi bi-pencil-square"></i>Editar Perfil</a>
                     </div>
                 </div>
             </nav>
@@ -71,7 +80,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                <a href="editarperfil.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
@@ -84,35 +93,64 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Mensagens</span>
+                            <span class="d-none d-lg-inline-flex">Message</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
                             </a>
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
                             </a>
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
                             </a>
                             <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificações</span>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
                             </a>
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
                             </a>
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
                             </a>
                             <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -131,59 +169,42 @@
             <!-- Navbar End -->
 
 
-
+            <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <a href=cadastrarcliente.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-person-circle"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Cadastro do Cliente</p>
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Editar Perfil</h6>
+                    <form>
+                        <div class="mb-3">
+                            <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 80px; height: 80px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Alterar foto de perfil</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="Alterar usuário" aria-label="Alterar usuário"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-10">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Alterar E-mail</label>
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Insira seu e-mail novo aqui..." aria-label="Insira seu e-mail novo aqui...">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <a href=cadfornecedor.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-building"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Cadastro do Fornecedor</p>
+                        <div class="row mb-3">
+                            <div class="col-sm-10">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Alterar senha</label>
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Insira sua senha nova aqui..." aria-label="Insira sua senha nova aqui...">
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary m-2">Confirmar Mudanças</button>
+                                </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <a href=cadsegementodefornecedores.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-cart"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Cadastro do Segmento</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4"> 
-                            <a href=404.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-clipboard"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Incluir Evento</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <a href=editarperfil.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-pencil-square"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Editar Perfil</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <a href=cadusuario.html class="btn btn-square btn-outline-primary m-2"><i class="bi bi-door-open"></i></a>
-                            <div class="ms-3">
-                                <p class="mb-2">Sair da Conta</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </div>
             </div>
+            <!-- Sale & Revenue End -->
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
@@ -209,18 +230,32 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ 	<script src="../../static/lib/chart/chart.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/chart/chart.min.js}"></script>
+	<script src="../../static/lib/easing/easing.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/easing/easing.min.js}"></script>
+	<script src="../../static/lib/waypoints/waypoints.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/waypoints/waypoints.min.js}"></script>
+	<script src="../../static/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/owlcarousel/owl.carousel.min.js}"></script>
+	<script src="../../static/lib/tempusdominus/js/moment.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/tempusdominus/js/moment.min.js}"></script>
+	<script src="../../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/tempusdominus/js/moment-timezone.min.js}"></script>
+	<script src="../../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js}"></script
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../../static/js/main.js"></script>
+	<script type="text/javascript"
+		th:src="@{../../static/js/main.js}"></script>
 </body>
 
 </html>

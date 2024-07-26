@@ -1,12 +1,12 @@
-package br.com.giben.index.controller;
+package br.com.giben.menu.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class IndexCtrl {
-	@GetMapping ("/")
+public class MenuController {
+	@GetMapping ("/menu")
 	public String index() {
-		return "home/index";
+		return "menu/menu";
 	}
 }

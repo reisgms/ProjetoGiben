@@ -1,8 +1,12 @@
 HELP.md
+
 target/
+target/classes/META-INF/maven/br.com.giben/Giben/pom.properties
+
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+
+### Eclipse e  Maven ###
+*.log
 
 ### STS ###
 .apt_generated
@@ -32,3 +36,5 @@ build/
 ### VS Code ###
 .vscode/
 /bin/
+
+
